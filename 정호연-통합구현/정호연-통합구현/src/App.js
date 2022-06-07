@@ -13,7 +13,6 @@ import BoardNum from './components/BoardNum'
 
 function App() {
 
-  
   return (
     <div className="App">
 
@@ -32,13 +31,8 @@ function App() {
     <Route path=":id" element={<BoardNum />}></Route>
       </Route> 
 
-
     </Routes>
-
-
-
     </div>
   );
 }
-
 export default App;
