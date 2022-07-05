@@ -16,12 +16,14 @@ const MemoContainer = () => {
     }));
   
     const dispatch = useDispatch();
-    const onChangTitle = useCallback((input) => dispatch(changTitle(input)), [dispatch]);
+    const onChangTitle = useCallback((input) => dispatch(changTitle(input)),[dispatch]);
     const onChangText = useCallback((input) => dispatch(changText(input)), [dispatch]);
     const onInsert = useCallback((memo) => dispatch(insert(memo)), [dispatch]);
     const onRemove = useCallback((id) => dispatch(remove(id)), [dispatch]);
   
-    return <Memo title={title} text={text} memos={memos} onChangText={onChangText} onChangTitle={onChangTitle} onInsert={onInsert} onRemove={onRemove} />;
+    return <Memo title={title} text={text} memos={memos}
+    onChangText={onChangText} onChangTitle={onChangTitle}
+    onInsert={onInsert} onRemove={onRemove} />;
   };
   
   export default MemoContainer;
